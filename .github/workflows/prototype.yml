@@ -1,0 +1,17 @@
+name: tests run prototype
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+    - 'TARGET_FOLDER/**'
+
+jobs:
+  run_tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "V-238204"
+        # check that conforms 
+        run: grep -i password /boot/grub/grub.cfg
+        
+
