@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: "V-238204"
         # check that conforms 
-        run: grep -i password /boot/grub/grub.cfg
-        shell: bash {0}
+        run: ls / && grep -i password /boot/grub/grub.cfg
+        
 
 
