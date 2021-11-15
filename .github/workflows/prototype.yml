@@ -13,5 +13,6 @@ jobs:
       - name: "V-238204"
         # check that conforms 
         run: grep -i password /boot/grub/grub.cfg
-        
+        shell: bash {0}
+
 
