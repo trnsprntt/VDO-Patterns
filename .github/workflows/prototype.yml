@@ -14,8 +14,8 @@ jobs:
       - uses: actions/checkout@v2
 
       # check that conforms to V-238204
-      - name: "V-238204"
-        run: cat /etc/pam.d/login && grep pam_lastlog /etc/pam.d/login
+#       - name: "V-238204"
+#         run: cat /etc/pam.d/login && grep pam_lastlog /etc/pam.d/login
         
       - name: Setup java11
         uses: actions/setup-java@v2
@@ -27,6 +27,7 @@ jobs:
         shell: bash
         run: |
           cd src/tests/
+          ls
           java -ea TestStig
       
       # - name: execute tests
