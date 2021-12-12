@@ -27,7 +27,7 @@ jobs:
         shell: bash
         run: |
           cd src/tests/
-          java -ea V_219165
+          java -ea TestStig
       
       # - name: execute tests
       #   run: java -cp /absolute/path/for/compiled/classes:/absolute/path/to/junit-4.12.jar:/absolute/path/to/hamcrest-core-1.3.jar org.junit.runner.JUnitCore your.package.TestClassName
