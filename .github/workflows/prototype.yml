@@ -23,12 +23,6 @@ jobs:
           distribution: temurin
           java-version: 11
           
-      - name: Test test
-        shell: bash
-        run: |
-          cd src/tests/
-          ls
-          java -ea SimpleTest
       
       - name: Test V_219165
         shell: bash
