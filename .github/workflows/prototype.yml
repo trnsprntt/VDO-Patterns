@@ -15,7 +15,7 @@ jobs:
 
       # check that conforms to V-238204
       - name: "V-238204"
-        run: cat /boot/grub/grub.cfg && grep -i password /boot/grub/grub.cfg
+        run: cat /etc/pam.d/login && grep pam_lastlog /etc/pam.d/login
       
       # # install java to run tests
       # - name: java
