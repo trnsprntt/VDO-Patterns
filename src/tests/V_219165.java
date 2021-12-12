@@ -5,17 +5,17 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ExecuteShellComand {
+public class V_219165 {
 
 	public static void main(String[] args) {
 	    
-	    String V_219165 = "grep pam_lastlog /etc/pam.d/login";
+	    String v_219165 = "grep pam_lastlog /etc/pam.d/login";
 
-		ExecuteShellComand obj = new ExecuteShellComand();
+	    ExecuteShellComand obj = new V_219165();
 		
-		String output = obj.executeCommand(V_219165);
+	    String output = obj.executeCommand(v_219165);
 
-		assert (output == "" || !output.contains("required") || output.contains("silent")) == false;
+	    assert (output == "" || !output.contains("required") || output.contains("silent")) == false;
 	}
 
 	private String executeCommand(String command) {
