@@ -28,7 +28,6 @@ jobs:
         shell: bash
         run: |
           cd src/tests/
-          ls
           java -ea TestStig.java
       
       # - name: execute tests
