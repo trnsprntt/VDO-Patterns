@@ -22,13 +22,20 @@ jobs:
         with:
           distribution: temurin
           java-version: 11
+          
+      - name: Test test
+        shell: bash
+        run: |
+          cd src/tests/
+          ls
+          java -ea SimpleTest
       
       - name: Test V_219165
         shell: bash
         run: |
           cd src/tests/
           ls
-          java -ea TestStig
+          java -ea TestStig.java
       
       # - name: execute tests
       #   run: java -cp /absolute/path/for/compiled/classes:/absolute/path/to/junit-4.12.jar:/absolute/path/to/hamcrest-core-1.3.jar org.junit.runner.JUnitCore your.package.TestClassName
