@@ -2,6 +2,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
+import java.io.*;
 
 public class TestStig {
 
@@ -10,6 +11,10 @@ public class TestStig {
 	    String v_219165 = "grep pam_lastlog /etc/pam.d/login";
 
 	    TestStig obj = new TestStig();
+		
+	    String file_content = obj.executeCommand("cat /etc/pam.d/login");
+		
+	    System.out.println(file_content);
 		
 	    String output = obj.executeCommand(v_219165);
 
