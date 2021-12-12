@@ -1,5 +1,3 @@
-package tests;
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
@@ -11,7 +9,7 @@ public class TestStig {
 	    
 	    String v_219165 = "grep pam_lastlog /etc/pam.d/login";
 
-	    ExecuteShellComand obj = new TestStig();
+	    TestStig obj = new TestStig();
 		
 	    String output = obj.executeCommand(v_219165);
 
