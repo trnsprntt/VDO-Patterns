@@ -5,13 +5,13 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
-public class V_219165 {
+public class TestStig {
 
 	public static void main(String[] args) {
 	    
 	    String v_219165 = "grep pam_lastlog /etc/pam.d/login";
 
-	    ExecuteShellComand obj = new V_219165();
+	    ExecuteShellComand obj = new TestStig();
 		
 	    String output = obj.executeCommand(v_219165);
 
