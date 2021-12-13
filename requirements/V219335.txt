@@ -1,0 +1,25 @@
+Overview
+Finding ID	Version	Rule ID	IA Controls	Severity
+V-219335	UBTU-18-010505	SV-219335r610963_rule		Medium
+Description
+Kernel core dumps may contain the full contents of system memory at the time of the crash. Kernel core dumps may consume a considerable amount of disk space and may result in denial of service by exhausting the available space on the target file system partition.
+STIG	Date
+Canonical Ubuntu 18.04 LTS Security Technical Implementation Guide	2021-06-16
+Details
+Check Text ( C-21060r305333_chk )
+Verify that kernel core dumps are disabled unless needed.
+
+Check if "kdump" service is active with the following command:
+
+# systemctl is-active kdump.service
+inactive
+
+If the "kdump" service is active, ask the System Administrator if the use of the service is required and documented with the Information System Security Officer (ISSO).
+
+If the service is active and is not documented, this is a finding.
+Fix Text (F-21059r305334_fix)
+If kernel core dumps are not required, disable the "kdump" service with the following command:
+
+# systemctl disable kdump.service
+
+If kernel core dumps are required, document the need with the Information System Security Officer (ISSO).
