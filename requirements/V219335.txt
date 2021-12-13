@@ -23,3 +23,4 @@ If kernel core dumps are not required, disable the "kdump" service with the foll
 # systemctl disable kdump.service
 
 If kernel core dumps are required, document the need with the Information System Security Officer (ISSO).
+
