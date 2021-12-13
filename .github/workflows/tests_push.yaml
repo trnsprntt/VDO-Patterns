@@ -22,6 +22,5 @@ jobs:
           java-version: 11
 
       - name: Execute tests
-        continue-on-error: true
         run: cd src/tests/ && java -ea *.java
 
