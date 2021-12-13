@@ -22,5 +22,5 @@ jobs:
           java-version: 11
 
       - name: Execute tests
-        run: ls && cd src/tests/ && ls && java -ea .
+        run: ls && cd src/tests/ && ls && java -ea TestStig.java
 
