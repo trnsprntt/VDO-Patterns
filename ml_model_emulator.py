@@ -58,8 +58,51 @@ public class V219165 {
     }
 
 }'''
-        elif requirement.find("")!=-1:
-            test = '''some other text'''
+        elif requirement.find("V-219335")!=-1:
+            test = '''import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
+import java.io.*;
+
+public class V219335 {
+
+    public static void main(String[] args) {
+        
+        String v_219335 = "systemctl is-active kdump.service";
+
+        V219335 obj = new V219335();
+        
+        String output = obj.executeCommand(v_219335);
+
+        assert output == "inactive";
+    }
+
+    private String executeCommand(String command) {
+
+        StringBuffer output = new StringBuffer();
+
+        Process p;
+        try {
+            p = Runtime.getRuntime().exec(command);
+            p.waitFor();
+            BufferedReader reader = 
+                        new BufferedReader(new InputStreamReader(p.getInputStream()));
+
+            String line = "";			
+            while ((line = reader.readLine())!= null) {
+                output.append(line + "\\n");
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return output.toString();
+
+    }
+
+}'''
     test_filename = tests_folder+r.replace(".txt","").replace('-','')+".java"
     # chdir("../")
     makedirs(path.dirname(test_filename), exist_ok=True)
