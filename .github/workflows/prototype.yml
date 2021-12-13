@@ -24,7 +24,7 @@ jobs:
           java-version: 11
           
       - name: vtest
-        run: apt list --installed | grep telnetd
+        run: sudo apt list --installed | grep telnetd
           
       
 #       - name: Test V_219165
