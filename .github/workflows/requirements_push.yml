@@ -1,4 +1,4 @@
-e_name: on new requirements push
+name: on new requirements push
 
 on:
   workflow_dispatch:
