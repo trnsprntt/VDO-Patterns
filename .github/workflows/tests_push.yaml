@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     paths:
-    - "src/tests/"
+      - src/tests/**
 
 jobs:
   run_tests:
