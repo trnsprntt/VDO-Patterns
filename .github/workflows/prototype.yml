@@ -25,6 +25,7 @@ jobs:
           git config --global user.name 'trnsprntt'
           git config --global user.email 'olya.chernukhina@gmail.com'
           git remote set-url origin https://x-access-token:${{ secrets.GIT_TOKEN }}@github.com/${{ github.repository }}
+          git add .
           git commit -am "Automated tests generation"
           git push
           
