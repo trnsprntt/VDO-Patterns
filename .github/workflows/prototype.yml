@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     paths:
-    - 'TARGET_FOLDER/**'
+    - 'requirements/**'
 
 jobs:
   run_tests:
@@ -18,7 +18,7 @@ jobs:
 #         run: cat /etc/pam.d/login && grep pam_lastlog /etc/pam.d/login
           
       - name: Generate java tests
-        run: python3 ml_model_emulator.py && ls /src/tests
+        run: python3 ml_model_emulator.py && ls
           
       - name: Commit & Push changes
         uses: actions-js/push@master
