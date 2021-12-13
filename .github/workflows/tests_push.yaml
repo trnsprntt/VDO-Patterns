@@ -2,9 +2,9 @@ name: Run java tests
 
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - 'src/tests/*.java'
+#   push:
+#     paths:
+#       - 'src/tests/*.java'
 
 jobs:
   run_tests:
