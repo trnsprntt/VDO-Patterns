@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     paths:
-    - 'src/tests/**'
+    - "src/tests/"
 
 jobs:
   run_tests:
@@ -22,5 +22,5 @@ jobs:
           java-version: 11
 
       - name: Execute tests
-        run: cd /src/tests/ && java -ea .
+        run: ls && cd src/tests/ && java -ea .
 
