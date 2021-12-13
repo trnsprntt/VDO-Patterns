@@ -1,28 +1,26 @@
-name: Run simple java test
+name: Run java tests
 
 on:
   workflow_dispatch:
-  pull_request:
+  push:
+    paths:
+    - 'src/tests/**'
 
 jobs:
-  test:
+  run_tests:
     name: Run java tests
     runs-on: ubuntu-20.04
     steps:
       # checkout the repo
       - uses: actions/checkout@v2
 
-      # setup java8
+      # setup java11
       - name: Setup java11
         uses: actions/setup-java@v2
         with:
           distribution: temurin
           java-version: 11
-          cache: 'maven'
 
-      - name: Build with Maven
-        run: "mvn -B package --file pom.xml"
-
-      - name: Run Simple Test
-        run: "java -jar target/VDO-Patterns-1.0-SNAPSHOT.jar"
+      - name: Execute tests
+        run: cd /src/tests/ && java -ea .
 
