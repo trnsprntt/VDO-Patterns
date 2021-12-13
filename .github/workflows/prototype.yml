@@ -20,10 +20,13 @@ jobs:
       - name: Generate java tests
         run: python3 ml_model_emulator.py && ls
           
-      - name: Commit & Push changes
-        uses: actions-js/push@master
-        with:
-          github_token: ${{ secrets.GIT_TOKEN }}
+      - name: Commit changes
+        run: |
+          git config --global user.name 'trnsprntt'
+          git config --global user.email 'olya.chernukhina@gmail.com'
+          git remote set-url origin https://x-access-token:${{ secrets.GIT_TOKEN }}@github.com/${{ github.repository }}
+          git commit -am "Automated tests generation"
+          git push
           
       
 #       - name: Test V_219165
