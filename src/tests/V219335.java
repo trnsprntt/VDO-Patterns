@@ -4,21 +4,17 @@ import java.util.ArrayList;
 import java.util.List;
 import java.io.*;
 
-public class V219165 {
+public class V219335 {
 
     public static void main(String[] args) {
         
-        String v_219165 = "grep pam_lastlog /etc/pam.d/login";
+        String v_219335 = "systemctl is-active kdump.service";
 
-        V219165 obj = new V219165();
+        V219335 obj = new V219335();
         
-        String file_content = obj.executeCommand("cat /etc/pam.d/login");
-        
-        System.out.println(file_content);
-        
-        String output = obj.executeCommand(v_219165);
+        String output = obj.executeCommand(v_219335);
 
-        assert (output == "" || !output.contains("required") || output.contains("silent")) == false;
+        assert output == "inactive";
     }
 
     private String executeCommand(String command) {
