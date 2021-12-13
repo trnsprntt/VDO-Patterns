@@ -23,4 +23,5 @@ Configure the Ubuntu operating system to provide users with feedback on when acc
 
 Add the following line to the top of "/etc/pam.d/login":
 
-session required pam_lastlog.so showfailed
+session required pam_lastlog.so  showfailed
+
